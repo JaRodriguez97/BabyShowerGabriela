@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Tinkerbell"; /* nombre que usarás en CSS */
-  src: url("./assets/tinkerbell.ttf") format("truetype");
+  src: url("/assets/tinkerbell.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
