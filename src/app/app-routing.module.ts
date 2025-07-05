@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () =>
       import('./modules/inicio/inicio.module').then((m) => m.InicioModule),
-    title: 'Bienvenido al Baby Shower de la Pequeña Daniela',
+    title: 'Bienvenid@s al Baby Shower de la Pequeña Gabriela',
   },
   // {
   //   path: 'marco',
