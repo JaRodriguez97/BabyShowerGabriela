@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gabriela-hadas",
+            "outputPath": "dist/GabrielaHadas/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -91,6 +91,59 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/GabrielaHadas/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "GabrielaHadas:build:development",
+              "serverTarget": "GabrielaHadas:server:development"
+            },
+            "production": {
+              "browserTarget": "GabrielaHadas:build:production",
+              "serverTarget": "GabrielaHadas:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "GabrielaHadas:build:production",
+              "serverTarget": "GabrielaHadas:server:production"
+            },
+            "development": {
+              "browserTarget": "GabrielaHadas:build:development",
+              "serverTarget": "GabrielaHadas:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

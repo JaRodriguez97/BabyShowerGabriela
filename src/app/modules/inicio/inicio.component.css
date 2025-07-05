@@ -1,0 +1,274 @@
+.container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100svh;
+  background-color: var(--color-primary);
+  background-image: url("../../../assets/img/fondo/fondo2.jpg");
+  background-repeat: no-repeat;
+  animation: animatebackground 2s linear both 1s;
+  background-position: bottom;
+}
+
+@keyframes animatebackground {
+  0% {
+    background-size: 100vw 100svh;
+  }
+  100% {
+    background-size: 120vw 98svh;
+  }
+}
+
+.container::after {
+  content: "";
+  background-image: url(../../../assets/img/personaje3/personaje3.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 2;
+  animation: slide-right 1s linear both 1.5s;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5vw);
+  }
+}
+
+.container::before {
+  content: "";
+  background-image: url(../../../assets/img/personaje4/personaje4-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transform: rotate(290deg);
+  animation: slide-left 1s linear both 1s;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(40vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container header::after {
+  content: "";
+  background-image: url(../../../assets/img/personaje5/personaje5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40svh;
+  left: -50vw;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  animation: slide-top-right 5s linear both 2s;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+@keyframes slide-top-right {
+  0% {
+    transform: translateY(40svh) translateX(-50vw);
+  }
+  100% {
+    transform: translateY(0svh) translateX(250vw);
+  }
+}
+
+.container header::before {
+  content: "";
+  background-image: url(../../../assets/img/principal/principal1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50svh;
+  left: -100vw;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  animation: slide-top-right1 3s linear both 2s;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+@keyframes slide-top-right1 {
+  0% {
+    transform: translateY(50svh) translateX(-100vw) rotate(60deg);
+  }
+  100% {
+    transform: translateY(-20svh) translateX(250vw) rotate(0deg);
+  }
+}
+
+.container header h1 {
+  text-align: center;
+  font-size: 5em;
+  margin: 3svh auto;
+  text-wrap: pretty;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  animation: slide-bottom 1s linear both 1s;
+  z-index: 3;
+  position: relative;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-30svh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 770px) {
+  .shadow-background {
+    width: 100%;
+    position: absolute;
+    top: -10svh;
+    left: 0;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary),
+      transparent /* ,
+      transparent */
+    );
+    animation: to-bottom 2s linear both 1s;
+  }
+
+  @keyframes to-bottom {
+    0% {
+      top: -10svh;
+    }
+    100% {
+      top: 1.5svh;
+    }
+  }
+
+  .container header::before {
+    left: -100vw;
+  }
+
+  .container::before {
+    width: 150px;
+    height: 150px;
+    right: -10px;
+  }
+
+  .container header::after,
+  .container::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  main {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    height: fit-content;
+  }
+
+  main h2 {
+    font-size: 20vw;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-wrap: pretty;
+    animation: blur 1s linear both;
+    animation-delay: 5s;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10svh;
+    line-height: 1em;
+  }
+
+  @keyframes blur {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  main .principal {
+    width: 350px;
+    max-width: 80vw;
+    height: 350px;
+    /* max-height: fit-content; */
+    position: absolute;
+    animation: slide-top 1s linear both 2s;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: drop-shadow(0 5px 5px black);
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(30%);
+    }
+  }
+
+  main .personaje2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 45svh;
+    top: auto;
+    animation: slide-left-rotate 1s linear both 4s;
+    z-index: 5;
+    filter: drop-shadow(0 5px 5px black);
+  }
+
+  @keyframes slide-left-rotate {
+    0% {
+      opacity: 0;
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(50vw) translateY(70svh) rotate(360deg);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container header h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}

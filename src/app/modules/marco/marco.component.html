@@ -1,0 +1,50 @@
+<section class="container">
+  <header>
+    <img
+      src="../../../assets/img/protagonista/protagonista.webp"
+      alt="Daniela"
+      class="protagonista"
+    />
+    <img
+      src="../../../assets/img/principal/marco.webp"
+      alt="marco principal"
+      class="marco"
+    />
+  </header>
+
+  <main>
+    <h2 #titulo>
+      <span>Daniela</span><br />
+      Nuestra hermosa <strong>Osita</strong>
+    </h2>
+    <img
+      src="../../../assets/img/principal/principal1.webp"
+      alt=""
+      class="principal"
+    />
+
+    <section class="datosInfo">
+      <img
+        src="../../../assets/img/personaje4/personaje4-2.webp"
+        alt="personaje4-2"
+        class="personaje4-2"
+      />
+      <address>
+        <p>Acompañanos a Celebrar en:</p>
+        <strong>Unidad Sauce</strong>
+        <strong>Hacienda Kachipay</strong>
+        <span>Cra. 119 # 60 - 144</span>
+        <strong>04 Mayo</strong>
+        <strong>3:30pm</strong>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <img
+      *ngFor="let i of [1, 2, 3, 1, 2, 3, 1, 2, 3].reverse()"
+      [src]="'../../../assets/img/fondo/decoracion' + i + '.webp'"
+      alt="decoracion"
+    />
+  </footer>
+</section>

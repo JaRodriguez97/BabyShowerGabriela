@@ -1,0 +1,30 @@
+<div class="shadow-background"></div>
+<section class="container">
+  <header>
+    <h1>
+      Una Hada <br />
+      Amorosa <br />Está En Camino
+    </h1>
+  </header>
+
+  <main>
+    <img
+      src="../../../assets/img/principal/principal2.png"
+      class="principal"
+      alt="principal2"
+    />
+    <h2><span>Baby Shower</span> de <strong>Emily Gabriela</strong></h2>
+    <img
+      class="personaje2"
+      src="../../../assets/img/personaje2/personaje2.png"
+      alt="personaje2"
+    />
+  </main>
+  <footer>
+    <img
+      *ngFor="let i of [1, 2, 3, 4, 5, 2, 3, 4, 5, 1]"
+      [src]="'../../../assets/img/fondo/decoracion' + i + '.png'"
+      alt="decoracion"
+    />
+  </footer>
+</section>

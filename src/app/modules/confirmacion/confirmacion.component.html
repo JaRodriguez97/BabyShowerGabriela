@@ -1,0 +1,80 @@
+<section class="container">
+  <header>
+    <img
+      src="../../../assets/img/principal/principal2.webp"
+      alt="personaje2"
+      class="personaje2"
+      width="200"
+    />
+    <h2>
+      Nos gustaría que <strong>confirmaras</strong> <br />tu asistencia a este
+      evento tan<br />
+      <span>Esperado</span>
+    </h2>
+  </header>
+
+  <main>
+    <img
+      src="../../../assets/img/personaje2/personaje2.webp"
+      alt="personaje2"
+      class="personaje2"
+      width="200"
+    />
+
+    <img
+      src="../../../assets/img/personaje3/personaje3.webp"
+      alt="personaje3"
+      class="personaje3"
+      width="200"
+    />
+
+    <section class="confirmacion">
+      <address>
+        <section>
+          <span>Mayo 2025</span>
+          <strong>04</strong>
+          <span>3:30 pm</span>
+        </section>
+
+        <strong>Unidad Sauce</strong>
+        <span>Hacienda Kachipay</span>
+        <a href="https://maps.app.goo.gl/SQSZPVGLUZuXaDxS8" target="_blank">
+          <span>Cra. 119 # 60 - 144</span>
+        </a>
+        <small>Lluvia de sobres o regalo</small>
+      </address>
+
+      <small>
+        <a
+          href="https://maps.app.goo.gl/SQSZPVGLUZuXaDxS8"
+          class="mapa"
+          target="_blank"
+          >¿No sabes dónde queda? <br />Click Aquí para ver el mapa</a
+        >
+      </small>
+
+      <div class="action">
+        <a
+          href="https://wa.me/573011979357?text=Hola%2C%20queria%20comentarte%20que%20tengo%20muchas%20ganas%20de%20asistir%20al%20Baby%20Shower%20de%20Daniela%2C%20cuenta%20conmigo%20para%20ese%20dia.%20"
+          target="_blank"
+          class="primary"
+          >Sí Asistiré</a
+        >
+        <a
+          href="https://wa.me/573011979357?text=Hola%2C%20me%20entristece%20decirte%20que%20no%20podré%20asistir%20al%20Baby%20Shower%20de%20Daniela%2C%20por%20fuerza%20mayor,%2C%20prometo%20que%20paso%20a%20saludarla%20luego.%20"
+          target="_blank"
+          class="secondary"
+          >No Podré</a
+        >
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img
+      *ngFor="let i of [1, 2, 3, 1, 2, 3, 1, 2, 3]"
+      [src]="'../../../assets/img/fondo/decoracion' + i + '.webp'"
+      alt="decoracion"
+    />
+  </footer>
+</section>
