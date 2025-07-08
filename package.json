@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "c": "ng g c components/svgFlower --skip-import",
+    "c": "ng g c components/footer --skip-import",
     "d": "ng generate directive directives/dynamicTag --skip-import",
-    "m": "ng g m modules/confirmacion/confirmacion -m=app --route confirmacion --flat",
+    "m": "ng g m modules/footer/footer -m=app --route footer --flat",
     "s": "ng g s services/public/public",
     "dev": "ng s -o",
     "start": "ng serve",

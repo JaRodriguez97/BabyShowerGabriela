@@ -1,6 +1,14 @@
+span {
+  -webkit-text-stroke: 1px var(--color-secondary); /* Grosor y color del borde */
+}
+
+strong {
+  color: var(--color-primary);    font-size: 20vw;
+}
+
 section.container {
-  background-image: url("../../../assets/img/fondo/fondo2.webp");
-  background-size: cover;
+  background-image: url("../../../assets/img/fondo/fondo3.jpg");
+  background-size: 130vw 100vh;
   background-position: center;
   background-repeat: no-repeat;
   height: 100svh;
@@ -10,17 +18,35 @@ section.container {
 header .protagonista {
   position: absolute;
   width: 100%;
-  max-width: 75vw;
+  max-width: 400px;
   object-fit: cover;
-  top: 15px;
-  height: 100%;
-  max-height: 31svh;
-  left: 35px; /* margen globos en marco */
+  /* height: auto; */
+  /* max-height: 31svh; */
   right: 0;
+  left: 0;
+
   animation: opacity 2s linear both 1s;
   margin: 0 auto;
-  border-radius: 40px;
-  /* aspect-ratio: 4 / 3; */
+  clip-path: polygon(
+    15% 100%,
+    6% 88%,
+    0% 67%,
+    0 40%,
+    12% 18%,
+    27% 7%,
+    37% 0,
+    68% 0,
+    74% 10%,
+    83% 20%,
+    90% 28%,
+    94% 38%,
+    97% 49%,
+    99% 62%,
+    95% 77%,
+    87% 87%,
+    76% 100%
+  );
+  aspect-ratio: 375/255;
 }
 
 @media (max-width: 365px) {
@@ -69,7 +95,7 @@ main h2 {
   right: 20px;
   text-align: right;
   font-size: 15vw;
-  width: 80%;
+  width: 90%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   animation: to-left 1s linear both 1s;
   transition: all 0.3s ease-in-out;
@@ -88,7 +114,7 @@ main h2 {
 }
 
 main h2 span {
-  font-size: 80px;
+  /* font-size: 80px; */
 }
 
 main img.principal {
@@ -142,7 +168,8 @@ main .datosInfo address {
 
 main .datosInfo address p {
   width: 100%;
-  font-size: 1.5rem;
+    font-size: 10vw;
+    color: #000;
 }
 
 @media (max-height: 600px) and (max-width: 500px) {

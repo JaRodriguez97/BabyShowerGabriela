@@ -14,12 +14,12 @@ const routes: Routes = [
       import('./modules/inicio/inicio.module').then((m) => m.InicioModule),
     title: 'Bienvenid@s al Baby Shower de la Pequeña Gabriela',
   },
-  // {
-  //   path: 'marco',
-  //   loadChildren: () =>
-  //     import('./modules/marco/marco.module').then((m) => m.MarcoModule),
-  //   title: 'Protagonista del Baby Shower',
-  // },
+  {
+    path: 'marco',
+    loadChildren: () =>
+      import('./modules/marco/marco.module').then((m) => m.MarcoModule),
+    title: 'Protagonista del Baby Shower',
+  },
   // {
   //   path: 'confirmacion',
   //   loadChildren: () =>
@@ -35,9 +35,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking'
-})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabledBlocking',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

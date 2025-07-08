@@ -13,6 +13,6 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     if (!this.publicService.isPlaying()) this.publicService.playAudio();
 
-    // setTimeout(() => this.route.navigate(['marco']), 8000);
+    setTimeout(() => this.route.navigate(['marco']), 10000);
   }
 }
