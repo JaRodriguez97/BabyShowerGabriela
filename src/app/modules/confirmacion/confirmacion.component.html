@@ -1,16 +1,12 @@
 <section class="container">
-  <div class="banner">
-    <div
-      class="blocks"
-      *ngFor="let block of blocks; let i = index"
-      [ngStyle]="{
-        backgroundPosition: block.bgPosition,
-        animationDelay: block.delay + 's',
-        animationDuration: block.duration + 's'
-      }"
-    ></div>
+  <div class="contain">
+    <div class="bubbles">
+      <span
+        *ngFor="let b of arrayBubles"
+        [style.--i]="Math.random() * 10"
+      ></span>
+    </div>
   </div>
-
   <header>
     <img
       src="../../../assets/img/principal/principal2.png"
@@ -43,15 +39,21 @@
     <section class="confirmacion">
       <address>
         <section>
-          <span>Ago 2025</span>
-          <strong>17</strong>
-          <span>04:30 pm</span>
+          <span>
+            AGO<br />
+            2025
+          </span>
+          <span>17</span>
+          <span>
+            04:30<br />
+            PM
+          </span>
         </section>
 
         <!-- <strong>Unidad Sauce</strong> -->
         <span>Fonaviemcali</span>
         <a href="https://maps.app.goo.gl/CRqjMKzeb6Sgr4HS9" target="_blank">
-          <span>Calle 71 # 1a 5e - 22</span>
+          <span>Calle 71 # 1a5e 22</span>
         </a>
         <small>Tu elijes que regalo unico llevar</small>
       </address>
@@ -61,7 +63,7 @@
           href="https://maps.app.goo.gl/CRqjMKzeb6Sgr4HS9"
           class="mapa"
           target="_blank"
-          >¿No sabes dónde queda? <br />Click Aquí para ver el mapa</a
+          >¿No sabes dónde queda? <br />Click Aquí para ver el mapa 📍</a
         >
       </small>
 

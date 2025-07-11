@@ -2,54 +2,56 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-
-  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../../../assets/img/fondo/fondo4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
   overflow: hidden;
-
-  transform-style: preserve-3d;
-  /* display: flex; */
-  /* flex-direction: column; */
-
-  /* background-color: var(--color-secondary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23c37dfc' fill-opacity='0.41'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"),
-    radial-gradient(
-      rgba(255, 255, 255, 0.7),
-      transparent,
-      transparent,
-      var(--color-primary),
-      var(--color-primary)
-    ); */
 }
 
-.banner {
+.contain {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.bubbles {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
 
-.blocks {
-  width: 5vw;
-  height: 5vh;
-  background-image: url("../../../assets/img/fondo/fondo4.jpg");
-  background-size: 100vw 100vh;
-  animation-name: zoomIn;
-  animation-fill-mode: forwards;
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--color-primary);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #c37dfc44, 0 0 50px var(--color-primary),
+    0 0 100px var(--color-primary);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
 }
 
-@keyframes zoomIn {
+.bubbles span:nth-child(even) {
+  background: var(--color-secondary);
+  box-shadow: 0 0 0 10px #fd94a344, 0 0 50px var(--color-secondary),
+    0 0 100px var(--color-secondary);
+}
+
+@keyframes animate {
   0% {
-    transform: translateZ(800px);
-    opacity: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(100vh) scale(0);
   }
   100% {
-    transform: translateZ(0px);
-    opacity: 1;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transform: translateY(-10vh) scale(1);
   }
 }
 
@@ -207,6 +209,9 @@ main .confirmacion .mapa {
 main .confirmacion address {
   display: flex;
   flex-direction: column;
+  span {
+    font-family: inherit;
+  }
 }
 
 main .confirmacion address small {
@@ -221,22 +226,11 @@ main .confirmacion address span {
 }
 
 main .confirmacion address section {
-  line-height: 1.5em;
+  line-height: 8svh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-main .confirmacion address section span {
-  font-size: 12vw;
-  font-style: normal;
-  width: 30%;
-}
-
-main .confirmacion address section strong {
-  /* font-size: 12vw; */
-  width: 30%;
-  line-height: 1em;
+  flex-wrap: nowrap;
 }
 
 .action {

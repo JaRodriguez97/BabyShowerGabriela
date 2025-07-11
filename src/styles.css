@@ -44,7 +44,7 @@ span {
 
 strong {
   font-size: 15vw;
-  -webkit-text-stroke: 1px white; /* Grosor y color del borde */
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.7); /* Grosor y color del borde */
   color: var(--color-secondary);
   font-weight: 500;
 }
