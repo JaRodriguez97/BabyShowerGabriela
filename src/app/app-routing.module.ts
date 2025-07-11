@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'splash', pathMatch: 'full' },
+  { path: '', redirectTo: 'confirmacion', pathMatch: 'full' },
   {
     path: 'splash',
     loadChildren: () =>
@@ -20,14 +20,14 @@ const routes: Routes = [
       import('./modules/marco/marco.module').then((m) => m.MarcoModule),
     title: 'Protagonista del Baby Shower',
   },
-  // {
-  //   path: 'confirmacion',
-  //   loadChildren: () =>
-  //     import('./modules/confirmacion/confirmacion.module').then(
-  //       (m) => m.ConfirmacionModule
-  //     ),
-  //   title: 'Confirma tu Asistencia al Mejor Baby Shower',
-  // },
+  {
+    path: 'confirmacion',
+    loadChildren: () =>
+      import('./modules/confirmacion/confirmacion.module').then(
+        (m) => m.ConfirmacionModule
+      ),
+    title: 'Confirma tu Asistencia al Mejor Baby Shower',
+  },
   {
     path: '**',
     redirectTo: '',

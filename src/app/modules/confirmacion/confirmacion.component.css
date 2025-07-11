@@ -1,12 +1,56 @@
-section.container {
-  background-image: url("../../../assets/img/fondo/fondo3.webp");
-  background-size: 100vw 100svh;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100svh;
+.container {
+  position: relative;
   width: 100vw;
+  height: 100vh;
+
+  perspective: 800px;
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  /* background-color: var(--color-secondary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23c37dfc' fill-opacity='0.41'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(
+      rgba(255, 255, 255, 0.7),
+      transparent,
+      transparent,
+      var(--color-primary),
+      var(--color-primary)
+    ); */
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.blocks {
+  width: 5vw;
+  height: 5vh;
+  background-image: url("../../../assets/img/fondo/fondo4.jpg");
+  background-size: 100vw 100vh;
+  animation-name: zoomIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: translateZ(800px);
+    opacity: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 header {
