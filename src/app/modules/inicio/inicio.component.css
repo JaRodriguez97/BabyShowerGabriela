@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100svh;
   background-color: var(--color-primary);
-  background-image: url("../../../assets/img/fondo/fondo2.jpg");
+  background-image: url("../../../assets/img/fondo/fondo2.webp");
   background-repeat: no-repeat;
   animation: animatebackground 2s linear both 1s;
   background-position: bottom;
@@ -20,7 +20,7 @@
 
 .container::after {
   content: "";
-  background-image: url(../../../assets/img/personaje3/personaje3.png);
+  background-image: url(../../../assets/img/personaje3/personaje3.webp);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@
 
 .container::before {
   content: "";
-  background-image: url(../../../assets/img/personaje4/personaje4-1.png);
+  background-image: url(../../../assets/img/personaje4/personaje4-1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@
 
 .container header::after {
   content: "";
-  background-image: url(../../../assets/img/personaje5/personaje5.png);
+  background-image: url(../../../assets/img/personaje5/personaje5.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@
 
 .container header::before {
   content: "";
-  background-image: url(../../../assets/img/principal/principal1.png);
+  background-image: url(../../../assets/img/principal/principal1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

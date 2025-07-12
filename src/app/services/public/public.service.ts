@@ -6,12 +6,14 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class PublicService {
   private audio!: HTMLAudioElement;
+  public isBrowser!: boolean;
 
   constructor(
     public route: Router,
     @Inject(PLATFORM_ID) private platformId: object
   ) {
-    if (isPlatformBrowser(this.platformId)) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
       this.audio = new Audio();
       this.audio.src = '../assets/audio.mp3';
       this.audio.volume = 0.2;
@@ -19,7 +21,7 @@ export class PublicService {
   }
 
   playAudio() {
-    if (isPlatformBrowser(this.platformId))
+    if (this.isBrowser)
       this.audio.play().catch((error) => {
         if (
           error.name === 'NotAllowedError' &&
@@ -33,12 +35,11 @@ export class PublicService {
   }
 
   pauseAudio() {
-    if (isPlatformBrowser(this.platformId)) this.audio.pause();
+    if (this.isBrowser) this.audio.pause();
   }
 
   isPlaying(): boolean {
-    if (isPlatformBrowser(this.platformId))
-      return !this.audio.paused && this.audio.currentTime > 0;
+    if (this.isBrowser) return !this.audio.paused && this.audio.currentTime > 0;
 
     return false;
   }
